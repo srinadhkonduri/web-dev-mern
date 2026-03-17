@@ -1,0 +1,11 @@
+img {
+    height: 300px;
+    width: 500px;
+    border-radius: 30px;
+    transform: rotateX('30deg');
+    transition: 2s;
+}
+
+img::hover{
+    transform: rotateX('30deg');
+}

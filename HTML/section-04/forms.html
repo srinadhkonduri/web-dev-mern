@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Elite Fitness Club Membership Registration</title>
+</head>
+
+<body>
+
+<h1>Elite Fitness Club</h1>
+
+<p>
+Use the form below to register for a membership at Elite Fitness Club.
+Please provide accurate information so our trainers can contact you and
+schedule your fitness assessment.
+</p>
+
+<form action="submit-membership.html" method="post">
+
+<h2>Personal Information</h2>
+
+<label for="fullname">Full Name</label><br>
+<input type="text" id="fullname" name="full_name" required>
+<br><br>
+
+<label for="email">Email Address</label><br>
+<input type="email" id="email" name="email_address" required>
+<br><br>
+
+<label for="phone">Phone Number</label><br>
+<input type="tel" id="phone" name="phone_number" required>
+<br><br>
+
+<label for="age">Age</label><br>
+<input type="number" id="age" name="age" min="16" max="80">
+<br><br>
+
+<label for="startdate">Preferred Membership Start Date</label><br>
+<input type="date" id="startdate" name="membership_start_date">
+<br><br>
+
+<h2>Membership Plan</h2>
+
+<label for="plan">Choose a Membership Plan</label><br>
+<select id="plan" name="membership_plan">
+
+<option value="basic">Basic Plan (Gym Access Only)</option>
+
+<option value="standard">Standard Plan (Gym + Group Classes)</option>
+
+<option value="premium">Premium Plan (Gym + Classes + Trainer)</option>
+
+<option value="elite">Elite Plan (All Facilities + Personal Trainer)</option>
+
+</select>
+
+<br><br>
+
+<h2>Fitness Goals</h2>
+
+<label for="goals">Describe Your Fitness Goals</label><br>
+<textarea id="goals" name="fitness_goals" rows="4" cols="40"></textarea>
+
+<br><br>
+
+<h2>Additional Information</h2>
+
+<label for="message">Any Health Conditions or Notes</label><br>
+<textarea id="message" name="health_notes" rows="4" cols="40"></textarea>
+
+<br><br>
+
+<button type="submit">Submit Membership Registration</button>
+
+</form>
+
+</body>
+
+</html>

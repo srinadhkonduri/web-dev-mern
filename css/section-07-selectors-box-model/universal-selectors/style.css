@@ -1,0 +1,24 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+#main_title{
+    background-color: green;
+    color: blueviolet;
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+.text_content{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: blue;
+    line-height: 1.6;
+}
+
+
+.one{
+    background-color: yellow;
+}
+

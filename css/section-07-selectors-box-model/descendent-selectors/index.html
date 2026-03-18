@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container p{
+            color: blue;
+        }
+
+        .container .special{
+            color: rgb(6, 3, 44);
+            background-color: green;
+        }
+
+        .container > h2{
+            color: rgb(201, 135, 36);
+        }
+
+        ul > li{
+            color: blueviolet;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        nav > a{
+            text-decoration: none;
+            padding: 10px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Descendent selectors DEMO</h1>
+
+    <div class="container">
+        <h2>this is the heading inside the container</h2>
+        <p>this is the paragraph directly inside the container</p>
+
+        <div>
+            <h2>tony stark</h2>
+            <p>this is the nested paragraph still effected by the descendent</p>
+
+            <p class="special">
+                this is something inside the p container
+            </p>
+
+        </div>
+    </div>
+
+    <p>
+        this is the paragraph outside
+    </p>
+
+
+    <hr>
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+    </ul>
+
+    <nav>
+        <a href="">one</a><a href="">Two</a>
+    </nav>
+</body>
+</html>

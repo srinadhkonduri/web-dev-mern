@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: coral;
+        }
+        header{
+            background-color: yellow;
+            height: 100vh;
+        }
+
+        /* smaller mobiles */
+        @media screen and (min-width: 1px) and (max-width : 374.99px){
+            header{
+                background-color: pink;
+                height: 100vh;
+            }
+        }
+
+        /* larger phones */
+        @media screen and (min-width : 375px){
+            header{
+                background-color: red;
+                height: 100vh;
+            }
+        }
+
+
+        /* tablets */
+        @media screen and (min-width : 768px) {
+            header{
+                background-color: rgb(174, 158, 13);
+                height: 100vh;
+            }
+        }
+
+        /* laptops */
+        @media screen and (min-width : 991.98px) {
+            header{
+                background-color: violet;
+                height: 100vh;
+            }
+        }
+
+        /* large screens  more then 1000 px*/
+        @media screen and (min-width : 992px) and (max-width: 2000px) {
+            header{
+                background-color: brown;
+                height: 100vh;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>tony</h1>
+    </header>
+</body>
+</html>

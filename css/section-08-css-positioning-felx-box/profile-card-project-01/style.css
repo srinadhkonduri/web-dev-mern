@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 100vh;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.profile-card{
+    padding: 20px;
+    display: flex;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    max-width: 550px;
+    width: 100%;
+}
+
+.profile-sidebar{
+    background-color: #1a2374;
+    padding: 30px;
+    text-align: center;
+    color: white;
+    border-radius: 30px;
+}
+
+.profile-photo{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid yellow;
+}
+
+.profile-main{
+    padding: 30px;
+}
+
+h1{
+    margin: 10px;
+}
+
+.job-title{
+    font-size: 18px;
+}
+
+#com{
+    color: orange;
+    font-weight: bolder;
+}
+
+.bio{
+    font-size: 18px;
+    color: #616161;
+    margin-bottom: 15px;
+}
+
+.contact-info{
+    font-size: 18px;
+    color: #616161;
+    margin-bottom: 15px;
+
+}
+
+.social-links{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.social-links a{
+    color: blue;
+    font-size: 28px;   
+}
+
+.social-links a:hover{
+    color: purple;
+}
+
+.skills{
+    display: flex;
+    gap: 12px;
+    color: rgb(214, 126, 94);
+    margin-bottom: 20px;
+}
+
+.skill{
+    display: flex;
+    background-color: yellow;
+    padding: 2px;
+    border-radius: 20%;
+    text-align: center;
+    justify-content: center;
+    color: rgb(109, 72, 3);
+}
+
+.btn{
+    padding: 20px;
+    width: 100%;
+    border: none;
+    background-color: orange;
+    font-size: 20px;
+    border-radius: 40px;
+    margin-top: 10px;
+}

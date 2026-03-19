@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box Demo</title>
+    <style>
+        .parent{
+            background-color: #f0f0f0;
+            height: 100vh;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            
+        }
+        .box{
+            height: 150px;
+            background-color: rebeccapurple;
+            margin: 10px;
+            font-size: 100px;
+        }
+
+        .box-1{
+            background-color: palegreen;
+            align-self: flex-start;
+            flex-grow: 1;
+        }
+
+        .box-2{
+            background-color: palegreen;
+            align-self: flex-end;
+            flex-grow: 2;
+        }
+        .box-3{
+            background-color: palegreen;
+            align-self: flex-start;
+            flex-grow: 3;
+        }
+        .box-4{
+            background-color: palegreen;
+            align-self: flex-end;
+            flex-grow: 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box box-1">box-1</div>
+        <div class="box box-2">box-2</div>
+        <div class="box box-3">box-3</div>
+        <div class="box box-4">box-4</div>
+    </div>
+</body>
+</html>

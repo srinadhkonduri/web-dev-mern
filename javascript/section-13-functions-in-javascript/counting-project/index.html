@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counting Project</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+        .container{
+            height: 50px;
+            width: 100%;
+            margin: 10px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            margin: 20px;
+            font-size: 20px;
+            padding: 15px;
+            border-radius: 50px;
+            background-color: white;
+            border: 3px solid orange;
+            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.24);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Counting project</h1>
+
+    <h2>Count : <span id="counterMain">0</span></h2>
+
+
+    <div class="container">
+        <button id="increaseBy1">Increase</button>
+        <button id="decreaseBy1">Decrease</button>
+        <button id="increaseBy10">Increase by 10</button>
+        <button id="decreaseBy10">Decrease By 10</button>
+        <button id="reset">Reset</button>
+    </div>
+    <Script src="./script.js"></Script>
+</body>
+</html>

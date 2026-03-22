@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get element by Name</title>
+</head>
+<body>
+    <form id="userFrom">
+        <label for="username">UserName : </label>
+        <input type="text" name="username" id="username">
+    
+        <br><br>
+    
+        <label for="email">Email :</label>
+        <input type="email" name="email" id="email">
+
+
+        <br><br>
+        <!-- multiple input fields with same names for language proficiency -->
+        <label for="">Language Proficiency</label>
+        <input type="radio" name="languageProficiency" value="Beginner">Beginner
+        <input type="radio" name="languageProficiency" value="Intermediate">Intermediate
+        <input type="radio" name="languageProficiency" value="Advanced">Advanced
+
+
+
+        <button type="button" onclick="collectData()">Submit</button>
+
+        <script src="./script.js"></script>
+    </form>
+</body>
+</html>

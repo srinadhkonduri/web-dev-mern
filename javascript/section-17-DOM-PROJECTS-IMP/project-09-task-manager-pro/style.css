@@ -1,0 +1,222 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ROOT VARIABLES (scalable design system) */
+:root {
+    --primary: #4f46e5;
+    --secondary: #6366f1;
+    --bg: #f4f7fb;
+    --white: #ffffff;
+    --text: #1f2937;
+    --light-text: #6b7280;
+    --border: #e5e7eb;
+    --radius: 12px;
+}
+
+/* BODY */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f9fafb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* CONTAINER */
+.container {
+    background: var(--white);
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+/* LOGO */
+.logo {
+    font-size: 40px;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+/* TITLE */
+h1 {
+    font-size: 26px;
+    color: var(--text);
+    margin-bottom: 5px;
+}
+
+p {
+    color: var(--light-text);
+    margin-bottom: 20px;
+}
+
+/* INPUT SECTION */
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-section input {
+    flex: 1;
+    padding: 12px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    outline: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.input-section input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1);
+}
+
+/* BUTTON */
+.input-section button {
+    padding: 12px 16px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.input-section button:hover {
+    background: var(--secondary);
+}
+
+/* FILTERS */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filter {
+    flex: 1;
+    margin: 0 5px;
+    padding: 8px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.filter:hover {
+    background: #f1f5f9;
+}
+
+.filter.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+/* TASK LIST */
+#taskList {
+    list-style: none;
+    text-align: left;
+}
+
+/* TASK ITEM */
+#taskList li {
+    background: #f9fafb;
+    padding: 12px;
+    border-radius: var(--radius);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--border);
+    transition: 0.2s;
+}
+
+#taskList li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+}
+
+/* COMPLETED TASK */
+.completed {
+    text-decoration: line-through;
+    color: var(--light-text);
+}
+
+/* ACTION BUTTONS */
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.task-actions i {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.task-actions i:hover {
+    transform: scale(1.2);
+}
+
+/* DELETE */
+.fa-trash {
+    color: #ef4444;
+}
+
+/* COMPLETE */
+.fa-check {
+    color: #10b981;
+}
+
+/* ========================= */
+/* 📱 RESPONSIVENESS */
+/* ========================= */
+
+/* TABLET */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .input-section {
+        flex-direction: column;
+    }
+
+    .input-section button {
+        width: 100%;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .filters {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .filter {
+        margin: 0;
+    }
+}

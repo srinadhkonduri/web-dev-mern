@@ -1,0 +1,124 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+/* ===== TITLE ===== */
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #38bdf8;
+    text-align: center;
+}
+
+/* ===== BUTTON ===== */
+#generate {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+/* hover */
+#generate:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5);
+}
+
+/* ===== GRID CONTAINER ===== */
+.container {
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+/* ===== CARD ===== */
+.container1 {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+/* hover effect */
+.container1:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7);
+}
+
+/* ===== IMAGE ===== */
+.image {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #38bdf8;
+}
+
+/* ===== NAME ===== */
+.container1 h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #f1f5f9;
+}
+
+/* ===== DESCRIPTION ===== */
+.container1 p {
+    font-size: 14px;
+    color: #cbd5f5;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    #generate {
+        width: 100%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .container {
+        gap: 15px;
+    }
+
+    .container1 {
+        padding: 15px;
+    }
+
+    .image {
+        width: 70px;
+        height: 70px;
+    }
+}

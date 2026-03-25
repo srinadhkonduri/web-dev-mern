@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart loan calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div id="heading">
+            <h3 id="heading-tag">Smart loan calculator</h3>
+            <p id="para-tag">A simple smart loan calculator for everything</p>
+        </div>
+
+        <div class="content">
+            <div class="left">
+                <form action="" >
+                    <label for="" class="label-data">Loan Amount</label>
+                    <br>
+                    <input type="number" id="loan-amount" class="input-data" placeholder="Eg : 25000">
+
+                    <br><br><br>
+
+                    <label   for="" class="label-data">Annual interest Rate (%)</label>
+                    <br>
+                    <input type="number" id="interest-rate"  class="input-data" placeholder="Eg : 5.5">
+
+                    <br><br><br>
+
+                    <label for="" class="label-data">Loan Term (Years)</label>
+                    <br>
+                    <input type="number" id="years" class="input-data" placeholder="Eg : 30">
+
+                    <br><br><br>
+
+                    <button id="buttonId">Calculate Loan</button>
+                </form>
+            </div>
+            <!-- left ends here -->
+
+            <!-- right begins here -->
+            <div class="right">
+                
+                <form action="">
+                    <h2 id="tom">Loan Summary</h2>
+                    <label for="" class="label-data">Monthly Payment : </label>
+                    <br>
+                    <input type="number" id="monthly-payment" class="input-data" placeholder="$ 0.00">
+
+                    <br><br><br>
+
+                    <label for="" class="label-data">Total Payment : </label>
+                    <br>
+                    <input type="number" id="total-payment" class="input-data" placeholder="$ 0.00">
+
+                    <br><br><br>
+
+                    <label for="" class="label-data">Total Interest : </label>
+                    <br>
+                    <input type="number" id="total-interest" class="input-data" placeholder="$ 0.00">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>

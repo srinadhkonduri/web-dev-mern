@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Tip Calculator</h1>
+
+    <!-- container starts here -->
+    <div class="container">
+        <div class="left">
+            <label for="">Enter amount </label>
+            <br>
+            <input type="number" id="amount" placeholder="Eg : 2500">
+
+            <br><br><br>
+            <label for="">Select the service</label>
+            <select name="" id="serviceExperience">
+                <option value="exceptional">Exceptional 25%</option>
+                <option value="veryGood">Very Good 20%</option>
+                <option value="good">Good 15%</option>
+                <option value="fair">Fair 10%</option>
+                <option value="bad">Bad 5%</option>
+            </select>
+
+            <br><br><br>
+            <label for="">Person</label>
+            <input type="number" id="persons" placeholder="Eg : 1" min="1">
+
+            <br><br><br>
+            <button id="buttonId">Calculate</button>
+        </div>
+
+        <!-- right div begins from here -->
+        <div class="right">
+            <label for="">Tip Amount</label>
+            <br>
+            <input type="number" id="tip-amount" placeholder="tip amount">
+
+            <br><br><br>
+
+            <label for="">Total Amount</label>
+            <br>
+            <input type="number" id="total-amount" placeholder="total amount">
+
+            <br><br><br>
+
+            <label for="">Amount Per Person</label>
+            <br>
+            <input type="number" id="amount-per-person" placeholder="amount per Person">
+
+            <br><br><br>
+
+            <label for="">Tip per person</label>
+            <br>
+            <input type="number" id="tip-per-person" placeholder="Tip per Person">
+            
+        </div>
+    </div>
+    <!-- container ends here -->
+
+
+    <script src="./script.js"></script>
+</body>
+</html>

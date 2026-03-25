@@ -1,0 +1,114 @@
+/* RESET (important for consistency) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY STYLING */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* HEADING */
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+/* MAIN CONTAINER */
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+    width: 90%;
+    max-width: 900px;
+}
+
+/* LEFT & RIGHT PANELS */
+.left, .right {
+    flex: 1;
+}
+
+/* LABELS */
+label {
+    font-weight: 600;
+    color: #333;
+}
+
+/* INPUTS + SELECT */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* INPUT FOCUS EFFECT */
+input:focus, select:focus {
+    border-color: #667eea;
+    outline: none;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 12px;
+
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+button:hover {
+    background: #5a67d8;
+    transform: scale(1.03);
+}
+
+/* RIGHT PANEL OUTPUT FIELDS */
+.right input {
+    background-color: #f5f7ff;
+    font-weight: bold;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}

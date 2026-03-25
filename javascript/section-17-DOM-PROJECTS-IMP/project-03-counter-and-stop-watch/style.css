@@ -1,0 +1,153 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #1e1e2f, #2c3e50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+    display: flex;
+    gap: 40px;
+    padding: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ===== CARD STYLE (COMMON) ===== */
+.counter-app,
+.stop-watch {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 30px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.counter-app:hover,
+.stop-watch:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* ===== HEADINGS ===== */
+#heading,
+.stop-watch h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #00d4ff;
+}
+
+/* ===== PARAGRAPH ===== */
+#para {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+/* ===== RESULT NUMBER ===== */
+#result {
+    font-size: 60px;
+    margin: 20px 0;
+    color: #00ffcc;
+    font-weight: bold;
+}
+
+/* ===== BUTTON CONTAINER ===== */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* ===== BUTTONS ===== */
+.buttons,
+#buttonId {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Individual button colors */
+#increase {
+    background: #27ae60;
+    color: white;
+}
+
+#decrease {
+    background: #e74c3c;
+    color: white;
+}
+
+#reset {
+    background: #f39c12;
+    color: white;
+}
+
+/* Stopwatch button */
+#buttonId {
+    background: #3498db;
+    color: white;
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* Hover Effects */
+.buttons:hover,
+#buttonId:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* ===== INPUT FIELD ===== */
+#input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* Placeholder */
+#input::placeholder {
+    color: #aaa;
+}
+
+/* ===== RESULT TEXT ===== */
+#result1 {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #00ffcc;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

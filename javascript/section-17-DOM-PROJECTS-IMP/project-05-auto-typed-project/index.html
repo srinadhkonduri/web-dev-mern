@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typed Effect</title>
+
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(170deg, pink, yellow);
+            font-family: sans-serif;
+        }
+
+        h1{
+            font-size: 40px;
+        }
+
+        span{
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Hi I am <span class="auto-type"></span></h1>
+
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+
+    <script>
+        var typed = new Typed('.auto-type', {
+            strings: ["Developer", "Programmer", "Content Creator", "Volleyball Player"],
+            typeSpeed: 100,
+            backSpeed: 50,
+            loop: true,
+            backDelay: 1000,
+            cursorChar: ">",
+            smartBackspace: true
+        });
+    </script>
+
+</body>
+</html>

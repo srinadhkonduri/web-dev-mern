@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom events</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="UserName">UserName</label>
+      <input type="text" name="UserName" id="userName" placeholder="Enter your name" />
+      <button id="submitButton">Click ME</button>
+    </form>
+
+    <script>
+        const name = document.getElementById('userName');
+        const buttonEle = document.getElementById('submitButton');
+
+
+        // new custom event
+        const userNameSubmitted = new CustomEvent('userNameSubmitted',{
+            bubbles : true,
+            cancelable : true,
+            detail : {text : ""},
+        });
+
+        // passing the variable name to event listener
+        document.addEventListener('userNameSubmitted', function(e){
+            console.log(`user name is ${e.detail.text}`);  
+        })
+
+        buttonEle.addEventListener('click', function(){
+            userNameSubmitted.detail.text = name.value;
+            document.dispatchEvent(userNameSubmitted);
+        })
+
+    </script>
+  </body>
+</html>

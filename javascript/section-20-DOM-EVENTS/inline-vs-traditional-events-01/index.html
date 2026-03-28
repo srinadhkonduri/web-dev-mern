@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline vs Traditional</title>
+    <style>
+        button{
+            height: 50px;
+            width: 5rem;
+            background-color: orangered;
+            color: white;
+        }
+        div{
+            height: 100px;
+            width: 100%;
+            background-color: gray;
+            text-align: center;
+            justify-content: center;
+        }
+        input{
+            width: 50%;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- mouse events -->
+    <button onclick="clickHandler()">Click me</button>
+    <button ondblclick="clickHandler1()">double Click me</button>
+    <div id="change" onmouseover="changeColor()" onmouseleave="normal()">Hover on me</div>
+
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+
+    <!-- keyboard evens -->
+    <input type="text" placeholder="enter some thing">
+
+
+    <!-- form events -->
+    <form onsubmit="onSubmitHandler()">
+        <input onfocus="onFocusHandler()" onkeyup="onKeyUp()" onkeydown="onKeyHandler()" type="text">
+        <button id="button" type="button">Submit</button>
+    </form>
+
+
+
+    <script>
+        function clickHandler(){
+            console.log('click even called');
+        }
+
+        
+        function clickHandler1(){
+            console.log('double click even called');
+        }
+
+        function changeColor(){
+            const ele = document.getElementById('change');
+            ele.style.backgroundColor = "green";
+        }
+
+        function normal(){
+            const ele = document.getElementById('change');
+            ele.style.backgroundColor = "grey";
+        }
+
+        function onKeyHandler(){
+            console.log('event keydown fired');
+            
+        }
+
+        function onKeyUp(){
+            console.log('fired on key up');
+        }
+
+        function onSubmitHandler(){
+            console.log('on submit event handler fired');
+        }
+
+        function onFocusHandler(){
+            console.log('on focus handler event clicked');
+            
+        }
+
+
+        const buttonEle = document.getElementById('button');
+        buttonEle.addEventListener('click', () => {
+            console.log('selected element');
+            
+        })
+    </script>
+
+</body>
+</html>

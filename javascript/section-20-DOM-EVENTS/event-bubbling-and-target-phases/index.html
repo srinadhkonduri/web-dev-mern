@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event bubbling and target phases</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="parentDiv">
+        <ul id="list">
+            <li id="item1">Item 1</li>
+            <li id="item2">Item 2</li>
+        </ul>
+    </div>
+
+
+    <script>
+        // adding event listener to parent div
+        document.getElementById('parentDiv').addEventListener('click',function(event) {
+            console.log('div clicked' + event.eventPhase);
+            
+        },true) // capturing phase
+
+        // event to ul
+        document.getElementById('list').addEventListener('click',function(event) {
+            console.log('div clicked' + event.eventPhase);
+            
+        },true) // capturing phase
+
+
+
+
+        // bubbling phase
+        document.getElementById('item1').addEventListener('click',function(event) {
+            console.log('div clicked' + event.eventPhase);
+            
+        },false) // bubbling phase
+
+        document.getElementById('item2').addEventListener('click',function(event) {
+            console.log('div clicked' + event.eventPhase);
+            
+        },false) // capturing phase
+
+    </script>
+</body>
+</html>

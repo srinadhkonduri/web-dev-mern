@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use get attribute</title>
+</head>
+
+<body>
+
+    <div class="container" id="product-img">
+        <img width="250px" src="https://cdn.pixabay.com/photo/2022/08/13/09/05/lion-7383228_1280.jpg" alt="image"
+            data-author="tony">
+        <img width="250px" src="https://cdn.pixabay.com/photo/2016/05/02/12/58/tiger-1367197_1280.jpg" alt="image"
+            data-author="captain">
+        <img width="250px" src="https://cdn.pixabay.com/photo/2020/04/03/14/05/african-elephant-4999036_1280.jpg"
+            alt="image" data-author="hulk">
+        <img width="250px" src="https://cdn.pixabay.com/photo/2014/01/05/01/19/dragon-238931_1280.jpg" alt="image"
+            data-author="tony">
+    </div>
+
+
+    <script>
+        // using get attribute
+        const imgEle1 = document.getElementById('product-img').querySelectorAll('img');
+
+        console.log(imgEle1);
+
+        // images by tony
+        let imagesByTony = [];
+
+        imgEle1.forEach(element => {
+            const author = element.getAttribute("data-author");
+            console.log(author);
+            if (author === 'tony') {
+                imagesByTony.push(element);
+            }
+        });
+
+        imagesByTony.forEach((img) => console.log(img));
+
+        // hide images that are not by tony
+        imgEle1.forEach((img) => {
+            if(!imagesByTony.includes(img)){
+                img.style.display = "none";
+            }
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using set attribute</title>
+</head>
+
+<body>
+    <div id="product">
+        <img width="250px" id="product-img" src="./image.png">
+        <h2 id="title">Old Product</h2>
+        <a id="buy-btn" href="#">Buy Now</a>
+        <button id="buttonId">Click Me</button>
+    </div>
+
+
+
+    <script>
+        function updateProduct(data) {
+            const img = document.getElementById('product-img');
+            const title = document.getElementById('title');
+            const link = document.getElementById('buy-btn');
+
+            // Update attributes
+            img.setAttribute('src', data.image);
+
+            // Update content
+            title.textContent = data.name;
+
+            // Update link
+            link.setAttribute('href', data.url);
+        }
+
+        // Simulated API response
+        const productData = {
+            name: "Lion Poster",
+            image: "https://cdn.pixabay.com/photo/2017/12/26/16/09/lion-3040797_1280.jpg",
+            url: "https://example.com/buy"
+        };
+        
+        const buttonEle = document.getElementById('buttonId');
+        buttonEle.addEventListener('click', function(){
+            updateProduct(productData);
+        })
+
+    </script>
+</body>
+
+</html>

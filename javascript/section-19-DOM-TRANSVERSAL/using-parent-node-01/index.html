@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using parent Node</title>
+</head>
+<body>
+    <div id="outerDiv">
+        <div class="innerDiv">
+            <ul class="nestedList">
+                <li data-item="fruit">Apple</li>
+                <li data-item="vegetable">Carrot</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+        // select a list item using the data attribute
+        const selectedEle = document.querySelector('[data-item="fruit"]')
+        console.log(selectedEle);
+
+
+        // navigating to parent
+        const parentEle = selectedEle.parentNode;
+        console.log(parentEle);
+
+        // navigating to grand-parent
+        const grandParent = parentEle.parentNode;
+        console.log(grandParent);
+        
+        
+    </script>
+</body>
+</html>

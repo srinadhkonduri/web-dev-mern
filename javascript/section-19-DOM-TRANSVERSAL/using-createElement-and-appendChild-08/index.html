@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using create element and append child</title>
+</head>
+<body>
+    <div id="container">
+        <h2>Dynamic To Do</h2>
+        <button id="button">Click ME</button>
+        <!-- tasks will be appear here -->
+        
+    </div>
+
+
+
+
+    <script>
+        function createTask(){
+        const mainContainer = document.getElementById('container');
+
+        const pEle1 = document.createElement('p');
+        pEle1.textContent = "this is the paragraph first line"
+        const pEle2 = document.createElement('p');
+        pEle2.textContent = "this is the paragraph second line";
+        const pEle3 = document.createElement('p');
+        pEle3.textContent = "this is the paragraph third line";
+
+        mainContainer.appendChild(pEle1);
+        mainContainer.appendChild(pEle2);
+        mainContainer.appendChild(pEle3);
+        }
+
+        const buttonEle = document.getElementById('button');
+
+        buttonEle.addEventListener('click',createTask);
+        
+    </script>
+</body>
+</html>

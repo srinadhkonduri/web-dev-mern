@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using insert Before</title>
+</head>
+
+<body>
+    <ul id="studentList"></ul>
+
+
+
+    <script>
+        const students = [
+            { name: "Ravi", marks: 85 },
+            { name: "Anita", marks: 92 },
+            { name: "Kiran", marks: 78 },
+            { name: "Sita", marks: 92 },
+            { name: "Arjun", marks: 60 }
+        ];
+
+        const studentList = document.getElementById('studentList');
+
+        studentList.forEach((student) => {
+            const li = document.createElement('li');
+            li.textContent = `${student.name} - ${student.marks}`;
+
+            let inserted = false;
+
+            const items = studentList.children;
+
+            for (let i = 0; i < items.length; i++) {
+                const currentMarks = parseInt(items[i].textContent.split(' - ')[1]);
+
+                // DESCENDING ORDER
+                if (student.marks > currentMarks) {
+                    list.insertBefore(li, items[i]);
+                    inserted = true;
+                    break;
+                }
+            }
+
+            if (!inserted) {
+                list.appendChild(li);
+            }
+
+        });
+    </script>
+</body>
+
+</html>

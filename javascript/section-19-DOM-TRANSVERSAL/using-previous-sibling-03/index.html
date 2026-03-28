@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Previous Sibling</title>
+</head>
+<body>
+    <p>This is the text</p>
+    <button id="button1">Change</button>
+
+    <p>This is the text</p>
+    <button id="button2">Change</button>
+
+    <script>
+        const button1Ele = document.getElementById('button1');
+        const button2Ele = document.getElementById('button2');
+
+        const textEle1 = button1Ele.previousSibling;
+        const textEle2 = button2Ele.previousSibling;
+        console.log(textEle1);
+        console.log(textEle2);
+
+        if(textEle1.nodeType === 3){
+            textEle1.textContent = 'text 1 has be updated'
+        }
+
+        
+        if(textEle2.nodeType === 3){
+            textEle2.textContent = 'text 2 has be updated'
+        }
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text manipulation</title>
+</head>
+<body>
+    <div id="blogPost">
+        <h1 id="title">This is the title</h1>
+        <p id="paragraph">This is a paragraph</p>
+        <div id="comments">
+            <div class="comments" id="comment1">
+                <span class="commentText">First Comment</span>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const titleEle = document.getElementById('title');
+        titleEle.textContent = `New Blog Title`
+        titleEle.style.color = "green";
+
+
+        // using innerHTML to add another paragraph
+        const paraEle = document.getElementById('paragraph');
+        paraEle.innerHTML = `<h1>added extra content to the para</h1>`;
+
+        paraEle.innerHTML += `added more content`;
+
+
+        // using innerText
+        const commentEle = document.getElementById('comment1').querySelector('commentText');
+        commentEle.innerText = `updated first comment`;
+
+    </script>
+</body>
+</html>

@@ -45,10 +45,10 @@ function calculateAll() {
   let totalPersonsIn = Number(totalPersons.value); // ✅ FIX
 
   // total tip amount
-  totalTipAmount.value = serviceQuality;
+  totalTipAmount.value = serviceQuality.toFixed(0);
 
   // total amount
-  totalAmountToBePaid.value = billAmount + serviceQuality;
+  totalAmountToBePaid.value = (billAmount + serviceQuality).toFixed(0);
 
   // amount per person
   totalAmountPerPerson.value = (

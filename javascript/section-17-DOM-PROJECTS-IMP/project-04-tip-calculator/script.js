@@ -1,77 +1,69 @@
 // java script code for the project
 let globalTip = 0;
 
-let inputAmount = document.getElementById('amount');
+let inputAmount = document.getElementById("amount");
 
-let selectedServiceExperience = document.getElementById('serviceExperience');
+let selectedServiceExperience = document.getElementById("serviceExperience");
 
-const requiredPercentageOfTip = function(){
+const requiredPercentageOfTip = function () {
+  let amount = Number(inputAmount.value); // ✅ FIX
+  let selectedService = selectedServiceExperience.value;
 
-    let amount = Number(inputAmount.value); // ✅ FIX
-    let selectedService = selectedServiceExperience.value;
+  if (selectedService == "exceptional") {
+    globalTip = amount * (25 / 100);
+  } else if (selectedService == "veryGood") {
+    globalTip = amount * (20 / 100);
+  } else if (selectedService == "good") {
+    globalTip = amount * (15 / 100);
+  } else if (selectedService == "fair") {
+    globalTip = amount * (10 / 100);
+  } else if (selectedService == "bad") {
+    globalTip = amount * (5 / 100);
+  } else {
+    globalTip = 0;
+  }
 
-    if(selectedService == 'exceptional'){
-        globalTip = amount * (25/100);
-    }
-    else if(selectedService == 'veryGood'){
-        globalTip = amount * (20/100);
-    }
-    else if(selectedService == 'good'){
-        globalTip = amount * (15/100);
-    }
-    else if(selectedService == 'fair'){
-        globalTip = amount * (10/100);
-    }
-    else if(selectedService == 'bad'){
-        globalTip = amount * (5/100);
-    }
-    else{
-        globalTip = 0;
-    }
+  return globalTip; // ✅ IMPORTANT
+};
 
-    return globalTip; // ✅ IMPORTANT
-}
+let totalPersons = document.getElementById("persons");
 
+let totalTipAmount = document.getElementById("tip-amount");
 
-let totalPersons = document.getElementById('persons');
+let totalAmountToBePaid = document.getElementById("total-amount");
 
-let totalTipAmount = document.getElementById('tip-amount');
+let totalAmountPerPerson = document.getElementById("amount-per-person");
 
-let totalAmountToBePaid = document.getElementById('total-amount')
+let totalTipPerPerson = document.getElementById("tip-per-person");
 
-let totalAmountPerPerson = document.getElementById('amount-per-person');
-
-let totalTipPerPerson = document.getElementById('tip-per-person');
-
-let buttonEle = document.getElementById('buttonId');
-
+let buttonEle = document.getElementById("buttonId");
 
 // main logic create a function
-function calculateAll(){
+function calculateAll() {
+  let billAmount = Number(inputAmount.value);
+  let serviceQuality = requiredPercentageOfTip(); // ✅ CALL FUNCTION
+  let totalPersonsIn = Number(totalPersons.value); // ✅ FIX
 
-    let billAmount = Number(inputAmount.value);
-    let serviceQuality = requiredPercentageOfTip(); // ✅ CALL FUNCTION
-    let totalPersonsIn = Number(totalPersons.value); // ✅ FIX
+  // total tip amount
+  totalTipAmount.value = serviceQuality;
 
-    // total tip amount
-    totalTipAmount.value = serviceQuality;
+  // total amount
+  totalAmountToBePaid.value = billAmount + serviceQuality;
 
-    // total amount
-    totalAmountToBePaid.value = billAmount + serviceQuality;
+  // amount per person
+  totalAmountPerPerson.value = (
+    (billAmount + serviceQuality) /
+    totalPersonsIn
+  ).toFixed(0);
 
-    // amount per person
-    totalAmountPerPerson.value = ((billAmount + serviceQuality) / totalPersonsIn).toFixed(2);
-
-    // tip per person
-    totalTipPerPerson.value = (serviceQuality / totalPersonsIn).toFixed(2);
+  // tip per person
+  totalTipPerPerson.value = (serviceQuality / totalPersonsIn).toFixed(0);
 }
 
-
-// adding th button
-buttonEle.addEventListener('click',calculateAll);
-
+// adding the button
+buttonEle.addEventListener("click", calculateAll);
 
 // add real time updates
-inputAmount.addEventListener('input',calculateAll);
-selectedServiceExperience.addEventListener('change',calculateAll);
-totalPersons.addEventListener('input',calculateAll)
+inputAmount.addEventListener("input", calculateAll);
+selectedServiceExperience.addEventListener("change", calculateAll);
+totalPersons.addEventListener("input", calculateAll);
